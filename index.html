@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example for plugin TinyMCE</title>
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" />
+	<link rel="stylesheet" href="tinymce/skins/lightgray/skin.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<textarea name="content" id="editor"></textarea>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>	
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="tinymce/tinymce.min.js"></script>
+	<script type="text/javascript">
+		tinymce.init({
+		  selector: '#editor',
+		  height: 500,
+		  theme: 'modern',
+		  menubar: false,
+		  plugins: [
+		    'advlist autolink lists link image charmap print preview anchor',
+		    'searchreplace visualblocks code fullscreen',
+		    'insertdatetime media table contextmenu paste code',
+		    'mention',
+		  ],
+		  mentions: {
+		  	source: [
+		  		{ name: 'Tyra Porcelli' }, 
+				{ name: 'Brigid Reddish' },
+				{ name: 'Ashely Buckler' },
+				{ name: 'Teddy Whelan' }
+		  	]
+		  },
+		  toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+		  content_css: 'tinymce/plugins/mention/rte-content.css'
+		});
+	</script>
+</body>
+</html>
